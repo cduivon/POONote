@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p th:text="'adresse: ' + ${adresse}" />
+    <p th:text="'content: ' + ${result}" />
+    
+    <a href="/adresse">Submit another address</a>
+    <div th:text="$for(int i=0; i<result.getFeatures().length; i++
+    >
+    </div>
+    
+</body>
+</html>
