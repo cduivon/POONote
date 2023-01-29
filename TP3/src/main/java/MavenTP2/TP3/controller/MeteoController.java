@@ -29,7 +29,7 @@ public class MeteoController {
 
 		model.addAttribute("adresse", content);
 		
-		String url = "https://api-adresse.data.gouv.fr/search/?q=" + content;
+		String url = "https://api-adresse.data.gouv.fr/search/?q=" + content + "&limit=1";
 		
 		Coucou result = template.getForObject(url, Coucou.class);
 		
