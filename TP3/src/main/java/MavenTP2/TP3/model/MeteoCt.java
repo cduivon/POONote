@@ -1,6 +1,6 @@
 package MavenTP2.TP3.model;
 
-public class meteoCt {
+public class MeteoCt {
 	
 	private City[] cities;
 

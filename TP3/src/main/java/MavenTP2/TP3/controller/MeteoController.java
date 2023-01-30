@@ -1,8 +1,5 @@
 package MavenTP2.TP3.controller;
 
-import MavenTP2.TP3.model.Coucou;
-
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -11,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
 import MavenTP2.TP3.model.Coucou;
+import MavenTP2.TP3.model.MeteoCt;
 
 
 @Controller
@@ -37,9 +35,12 @@ public class MeteoController {
 		
 		String urlMeteo = "https://api.meteo-concept.com/api/location/city?token=7589c4782de5e3a8c0c8c46c485a6c1c4b774b918b08aa51c92c3b09b9f84c2a&latitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[0] + "&longitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[1];
 		
+		//peut etre pas le bon truc 
+		//https://api.meteo-concept.com/api/forecast/daily?token=7589c4782de5e3a8c0c8c46c485a6c1c4b774b918b08aa51c92c3b09b9f84c2a&latitude=
+		
 		MeteoCt meteo = template.getForObject(urlMeteo, MeteoCt.class);
 		
-		
+		String meteoResult = meteo.getCities()[0].getLatitude().toString();
 		
 		return "meteo";
 	}
