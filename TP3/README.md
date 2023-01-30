@@ -76,3 +76,19 @@
 ## Dans cette barre, je mets une liste de lien (ici 2) reliés à mes pages respectives
 
 ## Dans les liens je mets les fragments et sur chaque page j'incère un div correspondant à chaque fragment
+
+#TP4
+
+## Meteo Concept est une API
+
+## bah l'url qui est donne non ?
+
+## la classique
+
+## avec des &
+
+## après le ?
+
+## jsp pas compris
+
+## jsp pas compris
