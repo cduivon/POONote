@@ -1,7 +1,7 @@
 # Spring Web 
 
 # lien du gitHub
-#(ajouter le lien du git)
+# (ajouter le lien du git)
 
 
 ## Spring Web fournit des fonctionnalités d'intégration telles que la fonctionnalité de téléchargement de fichiers et l'initialisation du conteneur IoC à l'aide de récepteurs de servlets et d'un contexte d'application orienté web.
@@ -81,18 +81,18 @@
 
 ## Dans les liens je mets les fragments et sur chaque page j'incère un div correspondant à chaque fragment
 
-#TP4
+# TP4
 
-## Meteo Concept est une API
+## Meteo Concept est une API pour laquelle il nous faut créer un compte, à partir de ce compte, on obtient un token servant de clé pour comptabiliser notre notre d'uitilisation
 
-## bah l'url qui est donne non ?
+## pour utiliser MeteoConcept, il nous faut utiliser l'url suivant :
+## https://api.meteo-concept.com/api/forecast/daily?token=
+## suivi de notre token personnel
 
-## la classique
+## on utilise la méthode GET
 
-## avec des &
+## on ajoute un ? à ka fin de la requête suivi de l'information que l'on veut transmettre
 
-## après le ?
+## les informations nécessaires sont dans le fichier JSON que l'on récupère avec la requête
 
-## jsp pas compris
-
-## jsp pas compris
+## pour les deux réponses, il suffit de descendre dans le fichier JSON reçu avec les getters des classes
