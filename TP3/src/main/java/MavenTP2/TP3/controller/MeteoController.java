@@ -33,14 +33,11 @@ public class MeteoController {
 		
 		Coucou result = (Coucou) template.getForObject(url, Coucou.class);
 		
-		String urlMeteo = "https://api.meteo-concept.com/api/location/city?token=7589c4782de5e3a8c0c8c46c485a6c1c4b774b918b08aa51c92c3b09b9f84c2a&latitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[0] + "&longitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[1];
-		
-		//peut etre pas le bon truc 
-		//https://api.meteo-concept.com/api/forecast/daily?token=7589c4782de5e3a8c0c8c46c485a6c1c4b774b918b08aa51c92c3b09b9f84c2a&latitude=
+		String urlMeteo = "https://api.meteo-concept.com/api/forecast/daily?token=7589c4782de5e3a8c0c8c46c485a6c1c4b774b918b08aa51c92c3b09b9f84c2a&latitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[0] + "&longitude=" + result.getFeatures()[0].getGeometry().getCoordinates()[1];
 		
 		MeteoCt meteo = template.getForObject(urlMeteo, MeteoCt.class);
 		
-		String meteoResult = meteo.getCities()[0].getLatitude().toString();
+		String meteoResult = meteo.getEmerides()[0].getDay().toString();
 		
 		return "meteo";
 	}
